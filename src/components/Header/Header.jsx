@@ -14,10 +14,9 @@ export default function(props) {
         logo = require(`../../resources/${currentPage.logo}`);
         document.title = `${currentPage.name} - ${config.siteName}`;
       }
-
-      let ref = url ? "./" : "";
+      
       let link = page !== currentPage ? (
-          <a href={ref + page.url}>{page.name}</a>
+          <Link to={page.url}>{page.name}</Link>
         ) : (
           page.name
         );
